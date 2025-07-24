@@ -17,14 +17,6 @@
         },
         "crossNavigation": {
             "inbounds": {
-                "intent1": {
-                    "signature": {
-                        "parameters": {},
-                        "additionalParameters": "allowed"
-                    },
-                    "semanticObject": "Incidents",
-                    "action": "display"
-                },
                 "incidents-display": {
                     "semanticObject": "incidents",
                     "action": "display",
