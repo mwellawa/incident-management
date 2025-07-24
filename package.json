@@ -19,7 +19,8 @@
     "watch": "cds watch",
     "start": "cds-serve",
     "jest": "npx jest --silent",
-    "test": "chest"
+    "test": "chest",
+    "watch-admin-customers": "cds watch --open admin-customers/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -35,7 +36,7 @@
             },
             "alice": {
               "roles": [
-                "support"
+                "admin"
               ]
             },
             "bob": {
@@ -56,7 +57,8 @@
     }
   },
   "sapux": [
-    "app/incidents"
+    "app/incidents",
+    "app/admin-customers"
   ],
   "private": true
 }
