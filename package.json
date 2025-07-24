@@ -13,14 +13,19 @@
     "@cap-js/cds-test": "*",
     "@cap-js/change-tracking": "^1.0.6",
     "@cap-js/sqlite": ">=1",
-    "@sap/cds-dk": ">=8"
+    "@sap/cds-dk": ">=8",
+    "rimraf": "^5.0.5",
+    "mbt": "^1.2.29"
   },
   "scripts": {
     "watch": "cds watch",
     "start": "cds-serve",
     "jest": "npx jest --silent",
     "test": "chest",
-    "watch-admin-customers": "cds watch --open admin-customers/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-admin-customers": "cds watch --open admin-customers/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy capire.incidents --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
   },
   "cds": {
     "requires": {
